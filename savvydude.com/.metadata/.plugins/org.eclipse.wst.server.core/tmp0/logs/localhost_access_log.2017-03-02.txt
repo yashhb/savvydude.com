@@ -1,0 +1,17 @@
+127.0.0.1 - - [02/Mar/2017:12:37:45 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:37:49 +0530] "GET /savvydude/ HTTP/1.1" 200 14249
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:15 +0530] "GET /savvydude/ HTTP/1.1" 200 14249
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:18 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:29 +0530] "GET /savvydude/admin/product/productform HTTP/1.1" 200 13623
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:38 +0530] "GET /savvydude/all/product/getAllProducts HTTP/1.1" 200 12690
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:38 +0530] "GET /savvydude/all/product/Resources/images/5.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:45 +0530] "GET /savvydude/admin/product/editform/5 HTTP/1.1" 200 11413
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:45 +0530] "GET /savvydude/admin/product/editform/Resources/css/header.css HTTP/1.1" 200 1111
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:45 +0530] "GET /savvydude/admin/product/editform/Resources/images/logo.png HTTP/1.1" 200 10680
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:45 +0530] "GET /savvydude/admin/product/editform/Resources/images/banner2.png HTTP/1.1" 200 62135
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:38:58 +0530] "GET /savvydude/admin/product/editform/5 HTTP/1.1" 200 11413
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:39:55 +0530] "POST /savvydude/admin/product/editProduct HTTP/1.1" 200 13347
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:40:10 +0530] "GET /savvydude/all/product/getAllProducts HTTP/1.1" 200 12690
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:40:10 +0530] "GET /savvydude/admin/product/productform HTTP/1.1" 200 13623
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:40:14 +0530] "GET /savvydude/all/product/home HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [02/Mar/2017:12:40:20 +0530] "GET /savvydude/home HTTP/1.1" 200 14249

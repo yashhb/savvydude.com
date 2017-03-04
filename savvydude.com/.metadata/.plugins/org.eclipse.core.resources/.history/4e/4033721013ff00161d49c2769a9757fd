@@ -1,0 +1,5 @@
+package com.savvydude.model;
+
+public class BillingAddress {
+
+}
