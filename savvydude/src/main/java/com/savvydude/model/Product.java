@@ -1,8 +1,8 @@
 package com.savvydude.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="product")
-public class Product {
+public class Product implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int pId;
@@ -40,15 +40,12 @@ public class Product {
 
 	@Transient 
 	private MultipartFile image;
-    	
-	 public Product()
+    public Product()
      {
 	
      }
 	
-
-	
-		public Product(int pId, String pName, String pDescription, int pQuantity, double pPrice, Date pMfg) {
+		public Product(int pId, String pName, String pDescription, int pQuantity, double pPrice, Date pMfg, MultipartFile image) {
 		super();
 		this.pId = pId;
 		this.pName = pName;
@@ -57,69 +54,58 @@ public class Product {
 		this.pPrice = pPrice;
 		this.pMfg = pMfg;
 		this.image = image;
-		}
+	}
+    
+	
+	public int getpId() {
+		return pId;
+	}
+	public void setpId(int pId) {
+		this.pId = pId;
+	}
+	public String getpName() {
+		return pName;
+	}
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+	public String getpDescription() {
+		return pDescription;
+	}
+	public void setpDescription(String pDesciption) {
+		this.pDescription = pDesciption;
+	}
+	public int getpQuantity() {
+		return pQuantity;
+	}
+	public void setpQuantity(int pQuantity) {
+		this.pQuantity = pQuantity;
+	}
+	public double getpPrice() {
+		return pPrice;
+	}
+	
+	public void setpPrice(double pPrice) {
+		this.pPrice = pPrice;
+	}
+	public Date getpMfg() {
+		return pMfg;
+	}
+	public void setpMfg(Date pMfg) {
+		this.pMfg = pMfg;
+	}
+	
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	public MultipartFile getImage() {
+		return image;
+	}
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
 
-		public int getpId() {
-			return pId;
-		}
-
-		public void setpId(int pId) {
-			this.pId = pId;
-		}
-
-		public String getpName() {
-			return pName;
-		}
-
-		public void setpName(String pName) {
-			this.pName = pName;
-		}
-
-		public String getpDescription() {
-			return pDescription;
-		}
-
-		public void setpDescription(String pDescription) {
-			this.pDescription = pDescription;
-		}
-
-		public int getpQuantity() {
-			return pQuantity;
-		}
-
-		public void setpQuantity(int pQuantity) {
-			this.pQuantity = pQuantity;
-		}
-
-		public double getpPrice() {
-			return pPrice;
-		}
-
-		public void setpPrice(double pPrice) {
-			this.pPrice = pPrice;
-		}
-
-		public Date getpMfg() {
-			return pMfg;
-		}
-
-		public void setpMfg(Date pMfg) {
-			this.pMfg = pMfg;
-		}
-		public Category getCategory() {
-			return category;
-		}
-
-		public void setCategory(Category category) {
-			this.category = category;
-		}
-		public MultipartFile getImage() {
-			return image;
-		}
-
-		public void setImage(MultipartFile image) {
-			this.image = image;
-		}
-
-		
-}
+	}

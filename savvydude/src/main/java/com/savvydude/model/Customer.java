@@ -1,5 +1,7 @@
 package com.savvydude.model;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,11 +15,11 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Customer {
+public class Customer implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
-@NotEmpty(message="Please Enter First Name")
+@NotEmpty(message="Please Enter First Name")	
 private String firstname;
 @NotEmpty(message="Please Enter Last Name")
 private String lastname;
@@ -30,19 +32,15 @@ private String phonenumber;
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="users_id")
 private Users users;
-
 @OneToOne(cascade=CascadeType.ALL)
-@JoinColumn(name="billingaddress_id")
+@JoinColumn(name="billlingaddress_id")
 private BillingAddress billingAddress;
-
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="shippingaddress_id")
 private ShippingAddress shippingAddress;
-
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="cart_id")
 private Cart cart;
-
 public int getId() {
 	return id;
 }

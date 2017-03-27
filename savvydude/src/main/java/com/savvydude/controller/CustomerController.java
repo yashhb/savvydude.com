@@ -1,5 +1,7 @@
 package com.savvydude.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,8 +22,9 @@ public String getRegistrationForm(Model model){
 	model.addAttribute("customer",new Customer());
 	return "register";
 }
-@RequestMapping("/all/registerCustomer")
-public String registerCustomer(@ModelAttribute(value="customer") Customer customer,BindingResult result,Model model){
+@RequestMapping("/registerCustomer")
+public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer customer
+		,BindingResult result,Model model){
 	if(result.hasErrors())
 		return "register";
 	try{

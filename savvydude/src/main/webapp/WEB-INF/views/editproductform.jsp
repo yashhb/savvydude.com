@@ -69,13 +69,6 @@ $('input[name=pMfg]').datepicker({
 <form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
 </c:forEach>
 </div>
-
-<div class="form-group">
-<label for="image">Image</label>
-<form:input path="image" type="file"/>
-</div>
-
-
 <input type="submit" value="Edit Product" class="btn btn-default">
 </form:form>
 
@@ -83,5 +76,8 @@ $('input[name=pMfg]').datepicker({
 
 
 </div>
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>

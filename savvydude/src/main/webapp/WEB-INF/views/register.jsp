@@ -1,4 +1,4 @@
-<title>Register-savvydude.com</title>
+<title>Register-penandpaper.in</title>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp" %>
@@ -9,10 +9,14 @@
 	</head>
 	<body style="background-color:#EEEEEE;">
 		<div style="margin-top:20px;margin-left:50px;" class="container">
-  <div  class="col-lg-12 well">
+  <div  class="col-lg-12 well">	<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<img width="40%" class="img-responsive" src ="Resources/images/register_here.png"></img>
+	               	</div>
+	            </div> 
 				
 	<div class="row">
-				<c:url var="url" value="/all/registerCustomer"></c:url>
+				<c:url var="url" value="/registerCustomer"></c:url>
                 <form:form action="${url }" commandName="customer">
 				
 					<div class="col-sm-12">
@@ -23,13 +27,13 @@
                                 <div class="input-group">
 							    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 								<form:input path="firstname" placeholder="Enter First Name Here.." class="form-control"></form:input>
-								 <form:errors path="firstname" cssStyle="color:#ff0000"></form:errors>
+							    <form:errors path="firstname" cssStyle="color:#ff0000"></form:errors>
 							</div>
 							</div>
 							<div class="col-sm-6 form-group">
 								<form:label path="lastname">Last Name</form:label>
 								<form:input path="lastname"  placeholder="Enter Last Name Here.." class="form-control"></form:input>
-								 <form:errors path="lastname" cssStyle="color:#ff0000"></form:errors>
+							    <form:errors path="lastname" cssStyle="color:#ff0000"></form:errors>
 							</div>
 						</div>	
 					    <div class="row">
@@ -38,7 +42,7 @@
 						<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
 						<form:input path="email" placeholder="Enter Email Address Here.." class="form-control"></form:input>
-						 <form:errors path="email" cssStyle="color:#ff0000"></form:errors>
+					    <form:errors path="email" cssStyle="color:#ff0000"></form:errors>
 					</div>
 					</div>	
 					<div class="col-sm-4 form-group">
@@ -46,7 +50,7 @@
 					    <div class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
 						<form:input path="phonenumber" placeholder="Enter Mobile Number Here.." class="form-control"></form:input>
-						<form:errors path="phonenumber" cssStyle="color:#ff0000"></form:errors>
+					    <form:errors path="phonenumber" cssStyle="color:#ff0000"></form:errors>
 					</div>
 					</div>	
 					</div>
@@ -56,7 +60,7 @@
 					    <div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
 						<form:input path="users.username" placeholder="Enter User Name Here.." class="form-control"></form:input>
-						${duplicateUsername}
+					    ${duplicateUsername}
 					    <form:errors path="users.username" cssStyle="color:#ff0000"></form:errors>
 					</div>
 					</div>
@@ -65,7 +69,7 @@
 					    <div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 						<form:input path="users.password" type="password" placeholder="Enter Password Here.." class="form-control"></form:input>
-						<form:errors path="users.password" cssStyle="color:#ff0000"></form:errors>
+					    <form:errors path="users.password" cssStyle="color:#ff0000"></form:errors>
 					</div>
 					</div>			
 					</div>

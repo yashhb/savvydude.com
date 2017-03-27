@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	
 <%@ include file="header.jsp"%>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -21,13 +20,16 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
-	<div class="container">
+<body style="background-color:#EEEEEE;">
+      
+	<div style="margin-top:10px;margin-bottom:10px;color:blue;"class="container">
+	
+   
 
-		<table class="table table-striped">
+	<table class="table table-striped">
 			<thead>
-				<tr>
-				    <th>Image</th>
+				<tr style="color:#26254F;">
+					<th>Product Image</th>
 					<th>Product Name</th>
 					<th>Description</th>
 					<th>Category</th>
@@ -38,9 +40,8 @@ $(document).ready(function(){
 				<tr>
 				<td>
 				<c:url var="src" value="Resources/images/${p.pId }.png"></c:url>
-				<img style="height:200px;width:200px;" src="${src } "/>
+				<img style="height:100px;width:100px;" src="${src } "/>
 				</td>
-				
 					<td>${p.pName }</td>
 					<td>${p.pDescription }</td>
 					<td>${p.category.categoryDetails}</td>
@@ -57,6 +58,7 @@ $(document).ready(function(){
 		</table>
 
 	</div>
+	<%@ include file="footer.jsp"%>
+	
 </body>
 </html>
-<%@ include file="footer.jsp"%>

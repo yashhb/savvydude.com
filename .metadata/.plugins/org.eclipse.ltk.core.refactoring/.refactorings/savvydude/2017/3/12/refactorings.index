@@ -1,0 +1,8 @@
+1490077097149	Move 'collectcustomerinfo.jsp' to 'flows'
+1490418980753	Move 5 resources to 'checkout'
+1490421620584	Rename resource 'collectcustomerinfo.jsp'
+1490421631165	Rename resource 'collectshippingdetails.jsp'
+1490421639494	Rename resource 'invalidcartwarning.jsp'
+1490421648127	Rename resource 'orderconfirmation.jsp'
+1490421657817	Rename resource 'thankcustomer.jsp'
+1490421712696	Rename resource 'application-context.xml'

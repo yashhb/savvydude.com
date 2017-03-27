@@ -1,5 +1,7 @@
 package com.savvydude.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,11 +12,11 @@ import javax.persistence.OneToOne;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class Users {
+public class Users  implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
-@NotEmpty(message="Please Enter User Name")
+@NotEmpty(message="Please Enter User Name")	
 @Column(unique=true)
 private String username;
 @NotEmpty(message="Please Enter Password")
@@ -30,6 +32,12 @@ public void setId(int id) {
 }
 public String getUsername() {
 	return username;
+}
+public Customer getCustomer() {
+	return customer;
+}
+public void setCustomer(Customer customer) {
+	this.customer = customer;
 }
 public void setUsername(String username) {
 	this.username = username;

@@ -87,6 +87,7 @@ $('input[name=pMfg]').datepicker({
 
 
 </div>
+
+<%@ include file="footer.jsp" %>
 </body>
 </html>
-<%@ include file="footer.jsp" %>

@@ -1,0 +1,5 @@
+package com.savvydude.dao;
+
+public interface CustomerOrderDao {
+	 void addCustomerOrder(CustomerOrder customerOrder) ;
+}

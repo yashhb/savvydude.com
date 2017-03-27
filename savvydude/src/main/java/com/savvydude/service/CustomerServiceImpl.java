@@ -9,9 +9,11 @@ import com.savvydude.model.Customer;
 @Service
 public class CustomerServiceImpl implements CustomerService{
 	@Autowired
-	private CustomerDao customerDao;
-		public void saveCustomer(Customer customer) {
-			customerDao.saveCustomer(customer);
-		}
-
+private CustomerDao customerDao;
+	public void saveCustomer(Customer customer) {
+		customerDao.saveCustomer(customer);
+	}
+	public Customer getCustomerByUsername(String username){
+		return customerDao.getCustomerByUsername(username);
+	}
 }
