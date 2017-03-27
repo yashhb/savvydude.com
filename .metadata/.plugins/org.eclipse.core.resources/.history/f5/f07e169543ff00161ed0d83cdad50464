@@ -1,6 +1,0 @@
-package com.savvydude.service;
-
-public interface CustomerService {
-	void saveCustomer(Customer customer);
-
-}
